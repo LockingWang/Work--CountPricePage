@@ -117,6 +117,11 @@ body {
 .btn-type:active {
   background: #f8d45a;
 }
+
+.active-btn {
+    background: #f8d45a;
+}
+
 @media (max-width: 767px) {
   .btn-type {
     padding: 0.5rem 2.25rem;
@@ -187,6 +192,9 @@ body {
 .market tbody {
   border-bottom: 2px solid #d9d9d9;
 }
+
+
+
 @media (max-width: 480px) {
   table {
     display: block;
@@ -218,4 +226,12 @@ body {
 .fa-caret-down {
   top: 9px;
   right: -15px;
+}
+
+.sort-advanced i:hover {
+    background-color: yellow;
+}
+
+.sort-advanced i:active {
+    background-color: red;
 }

@@ -56,9 +56,7 @@ searchGroup.addEventListener("click",function(e){
     };
     searchContent = searchKey.value;
     showResult.textContent = `查看「${searchContent}」的比價結果`;
-    showList.innerHTML = `<tr>
-    <td colspan="7" class="text-center p-3">資料載入中...</td>
-    </tr>`;
+    
     // 根據種類與關鍵字，過濾出符合資料。
     newData = data.filter(function(item){
         return item.種類代碼 == cropType && item.作物名稱.match(searchContent);
@@ -77,6 +75,9 @@ searchGroup.addEventListener("click",function(e){
 // 資料呈現函式
 
 function showNewList(){
+    showList.innerHTML = `<tr>
+    <td colspan="7" class="text-center p-3">資料載入中...</td>
+    </tr>`;
     // 資料排序步驟
     if (orderDirection === "increase"){
         if (orderType === "upPrice"){
